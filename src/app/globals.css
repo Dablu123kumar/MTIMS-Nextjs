@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 220 20% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary: 201 94% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 14% 50%;
+    --accent: 210 20% 96%;
+    --accent-foreground: 220 20% 20%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 201 94% 46%;
+    --info-foreground: 0 0% 100%;
+    --border: 214 20% 92%;
+    --input: 214 20% 92%;
+    --ring: 201 94% 46%;
+    --radius: 0.5rem;
+
+    /* Sidebar — always dark (Metronic signature) */
+    --sidebar: 240 10% 16%;
+    --sidebar-foreground: 220 10% 70%;
+    --sidebar-accent: 0 0% 100%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 8% 20%;
+    --sidebar-muted: 220 10% 50%;
+  }
+
+  .dark {
+    --background: 240 10% 8%;
+    --foreground: 210 20% 96%;
+    --card: 240 10% 12%;
+    --card-foreground: 210 20% 96%;
+    --popover: 240 10% 12%;
+    --popover-foreground: 210 20% 96%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 8% 18%;
+    --secondary-foreground: 210 20% 90%;
+    --muted: 240 8% 18%;
+    --muted-foreground: 215 14% 60%;
+    --accent: 240 8% 18%;
+    --accent-foreground: 210 20% 90%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 207 90% 54%;
+    --info-foreground: 0 0% 100%;
+    --border: 240 6% 20%;
+    --input: 240 6% 20%;
+    --ring: 207 90% 54%;
+
+    --sidebar: 240 10% 10%;
+    --sidebar-foreground: 220 10% 70%;
+    --sidebar-accent: 0 0% 100%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 8% 15%;
+    --sidebar-muted: 220 10% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Dark sidebar scrollbar */
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
